@@ -1,4 +1,4 @@
-# IIC
+# IIC（Inter-Integrated Circuit Bus）
 ---
 ## 1.缩写名
 SDA：Serial Data Line——串行数据线
