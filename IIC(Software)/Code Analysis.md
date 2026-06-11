@@ -303,7 +303,7 @@ uint8_t bl24c512_write_byte (typedef_iic *iic, uint16_t mem_addr, uint8_t data)
 {
     iic_start(iic);
 
-    iic_send_byte(iic, BL24C512_ADDR << 1);                    //发送设备地址 + 写方向，因为写对应的是0，所以可以整体左移一位
+    iic_send_byte(iic, BL24C512_ADDR << 1);                      //发送设备地址 + 写方向，因为写对应的是0，所以可以整体左移一位
     if (iic_wait_ack(iic))
     {
         return 1;                                                //此时的返回值代表的是对/错布尔状态，1代表失败
