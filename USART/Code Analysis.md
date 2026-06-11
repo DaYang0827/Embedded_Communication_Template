@@ -29,7 +29,7 @@ GPIOA：挂在AHB1
 //接收数据寄存器非空，也就是USART 已经收到了一个字节，这个字节现在放在接收数据寄存器里，还没有被你读走
     if (USART_GetFlagStatus(USART1, USART_FLAG_RXNE) != RESET)
     {
-        data = USART_ReceiveData(USART1);						        //在读取到这个字节之后，RXNE会自动清楚
+        data = USART_ReceiveData(USART1);						        //在读取到这个字节之后，RXNE会自动清除
     }
 ```
 ```c
