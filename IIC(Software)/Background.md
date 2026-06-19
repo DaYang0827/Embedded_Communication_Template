@@ -177,7 +177,7 @@ read_data = bl24c512_read_byte(&iic1, 0x0010);
 
 &emsp;&emsp; 设置EEPROM的内部地址指针为：0x0010，里面会涉及两个地址，第一个0xA0代表从机地址（0x50的写入），第二个0x0010代表从机的内部地址指针。
 
-**Sr是Repeat Start**，重复起始信号，它的作用是：不释放 IIC 总线，**直接从写地址阶段切换到读数据阶段**
+&emsp;&emsp; **Sr是Repeat Start**，重复起始信号，它的作用是：不释放 IIC 总线，**直接从写地址阶段切换到读数据阶段**
 
 &emsp;&emsp; 所以**读 EEPROM 的标准流程**是：**Start、设备地址 + 写、内部地址（告诉设备）、Repeated Start、设备地址 + 读、读数据Stop**
 
